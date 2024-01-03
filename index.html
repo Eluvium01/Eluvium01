@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteurs de Points</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .compteurs-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .compteur {
+            width: 30%;
+            text-align: center;
+        }
+
+        input {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="compteurs-container">
+        <div class="compteur" id="ennemiCompteur1">Ennemi 1: 100</div>
+        <div class="compteur" id="ennemiCompteur2">Ennemi 2: 100</div>
+        <div class="compteur" id="ennemiCompteur3">Ennemi 3: 100</div>
+    </div>
+
+    <div class="compteurs-container">
+        <input type="number" id="degatsEnnemi1" placeholder="Dégâts à Ennemi 1">
+        <input type="number" id="degatsEnnemi2" placeholder="Dégâts à Ennemi 2">
+        <input type="number" id="degatsEnnemi3" placeholder="Dégâts à Ennemi 3">
+    </div>
+
+    <div class="compteurs-container">
+        <button onclick="updateCompteurs()">Valider</button>
+    </div>
+
+    <div class="compteurs-container">
+        <div class="compteur" id="joueurCompteur1">Joueur 1: 100</div>
+        <div class="compteur" id="joueurCompteur2">Joueur 2: 100</div>
+        <div class="compteur" id="joueurCompteur3">Joueur 3: 100</div>
+    </div>
+
+    <div class="compteurs-container">
+        <input type="number" id="degatsJoueur1" placeholder="Dégâts à Joueur 1">
+        <input type="number" id="degatsJoueur2" placeholder="Dégâts à Joueur 2">
+        <input type="number" id="degatsJoueur3" placeholder="Dégâts à Joueur 3">
+    </div>
+
+    <div class="compteurs-container">
+        <button onclick="updateCompteurs()">Valider</button>
+    </div>
+
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
